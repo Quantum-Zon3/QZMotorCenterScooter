@@ -1,6 +1,6 @@
 ## Docker
 
-Levantar app + MySQL:
+Levantar app + PostgreSQL:
 
 ```bash
 docker compose up --build
@@ -12,18 +12,13 @@ API:
 http://localhost:3000/api/scooters
 ```
 
-MySQL desde Workbench:
+PostgreSQL desde un cliente SQL:
 
 - Host: `localhost`
-- Port: `3307`
-- User: `root`
-- Password: `root`
+- Port: `5432`
+- User: `postgres`
+- Password: `postgres`
 - Database: `qzmotorcenterscooter`
-
-Variables Docker usadas por los contenedores:
-
-- Archivo: `.env.docker`
-- La app local sigue usando `.env`
 
 Detener contenedores:
 
@@ -31,7 +26,7 @@ Detener contenedores:
 docker compose down
 ```
 
-Detener y borrar volumen de MySQL:
+Detener y borrar volumen de PostgreSQL:
 
 ```bash
 docker compose down -v
